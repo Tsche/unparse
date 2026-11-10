@@ -1,0 +1,48 @@
+.drop-overlay {
+  position: absolute;
+  inset: 36px 0 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  pointer-events: none;
+  background: rgba(8, 17, 27, 0.43);
+}
+.drop-overlay[hidden] {
+  display: none;
+}
+.drop-zone {
+  display: grid;
+  place-items: center;
+  margin: 4px;
+  border: 2px dashed var(--accent);
+  border-radius: 6px;
+  color: var(--text);
+  background: rgba(26, 84, 91, 0.8);
+  font-size: 12px;
+  font-weight: 700;
+  pointer-events: auto;
+}
+.drop-zone.over {
+  background: var(--accent);
+  color: var(--page);
+}
+.drop-zone[data-edge="top"] {
+  grid-column: 2;
+  grid-row: 1;
+}
+.drop-zone[data-edge="left"] {
+  grid-column: 1;
+  grid-row: 2;
+}
+.drop-zone[data-edge="right"] {
+  grid-column: 3;
+  grid-row: 2;
+}
+.drop-zone[data-edge="bottom"] {
+  grid-column: 2;
+  grid-row: 3;
+}
+.mobile-tabs {
+  display: none;
+}

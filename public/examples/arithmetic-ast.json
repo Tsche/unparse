@@ -1,0 +1,47 @@
+{
+  "kind": "ParenExpr",
+  "type": {
+    "qualType": "int"
+  },
+  "inner": [
+    {
+      "kind": "BinaryOperator",
+      "type": {
+        "qualType": "int"
+      },
+      "opcode": "+",
+      "inner": [
+        {
+          "kind": "IntegerLiteral",
+          "type": {
+            "qualType": "int"
+          },
+          "value": "2"
+        },
+        {
+          "kind": "BinaryOperator",
+          "type": {
+            "qualType": "int"
+          },
+          "opcode": "*",
+          "inner": [
+            {
+              "kind": "IntegerLiteral",
+              "type": {
+                "qualType": "int"
+              },
+              "value": "3"
+            },
+            {
+              "kind": "IntegerLiteral",
+              "type": {
+                "qualType": "int"
+              },
+              "value": "4"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

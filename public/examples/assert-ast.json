@@ -1,0 +1,142 @@
+{
+  "kind": "ParenExpr",
+  "type": {
+    "qualType": "void"
+  },
+  "inner": [
+    {
+      "kind": "ParenExpr",
+      "type": {
+        "qualType": "void"
+      },
+      "inner": [
+        {
+          "kind": "ConditionalOperator",
+          "type": {
+            "qualType": "void"
+          },
+          "inner": [
+            {
+              "kind": "CXXStaticCastExpr",
+              "type": {
+                "qualType": "_Bool"
+              },
+              "targetType": "_Bool",
+              "inner": [
+                {
+                  "kind": "CXXBoolLiteralExpr",
+                  "type": {
+                    "qualType": "_Bool"
+                  },
+                  "value": "false"
+                }
+              ]
+            },
+            {
+              "kind": "CXXFunctionalCastExpr",
+              "type": {
+                "qualType": "void"
+              },
+              "targetType": "void",
+              "inner": [
+                {
+                  "kind": "IntegerLiteral",
+                  "type": {
+                    "qualType": "int"
+                  },
+                  "value": "0"
+                }
+              ]
+            },
+            {
+              "kind": "CallExpr",
+              "type": {
+                "qualType": "void"
+              },
+              "inner": [
+                {
+                  "kind": "ImplicitCastExpr",
+                  "type": {
+                    "qualType": "void (*)(const char *, const char *, unsigned int, const char *) __attribute__((noreturn)) noexcept(true)"
+                  },
+                  "inner": [
+                    {
+                      "kind": "DeclRefExpr",
+                      "type": {
+                        "qualType": "void (const char *, const char *, unsigned int, const char *) __attribute__((noreturn)) noexcept(true)"
+                      },
+                      "referencedDecl": {
+                        "kind": "VarDecl",
+                        "name": "__assert_fail"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "kind": "ImplicitCastExpr",
+                  "type": {
+                    "qualType": "const char *"
+                  },
+                  "inner": [
+                    {
+                      "kind": "StringLiteral",
+                      "type": {
+                        "qualType": "const char[6]"
+                      },
+                      "value": "\"false\""
+                    }
+                  ]
+                },
+                {
+                  "kind": "SourceLocExpr",
+                  "type": {
+                    "qualType": "const char *"
+                  }
+                },
+                {
+                  "kind": "SourceLocExpr",
+                  "type": {
+                    "qualType": "unsigned int"
+                  }
+                },
+                {
+                  "kind": "ImplicitCastExpr",
+                  "type": {
+                    "qualType": "const char *"
+                  },
+                  "inner": [
+                    {
+                      "kind": "UnaryOperator",
+                      "type": {
+                        "qualType": "const char[10]"
+                      },
+                      "opcode": "__extension__",
+                      "inner": [
+                        {
+                          "kind": "PredefinedExpr",
+                          "type": {
+                            "qualType": "const char[10]"
+                          },
+                          "name": "__PRETTY_FUNCTION__",
+                          "inner": [
+                            {
+                              "kind": "StringLiteral",
+                              "type": {
+                                "qualType": "const char[10]"
+                              },
+                              "value": "\"top level\""
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

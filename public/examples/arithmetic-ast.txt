@@ -1,0 +1,6 @@
+ParenExpr 0x1a110 'int'
+`-BinaryOperator 0x1a120 'int' '+'
+  |-IntegerLiteral 0x1a130 'int' 2
+  `-BinaryOperator 0x1a140 'int' '*'
+    |-IntegerLiteral 0x1a150 'int' 3
+    `-IntegerLiteral 0x1a160 'int' 4

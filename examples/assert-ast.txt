@@ -1,0 +1,18 @@
+ParenExpr 0x1a7aa930 'void'
+`-ParenExpr 0x1a7aa910 'void'
+  `-ConditionalOperator 0x1a7aa8e0 'void'
+    |-CXXStaticCastExpr 0x1a7aa520 '_Bool' static_cast<_Bool> <NoOp>
+    | `-CXXBoolLiteralExpr 0x1a7aa500 '_Bool' false
+    |-CXXFunctionalCastExpr 0x1a7aa580 'void' functional cast to void <ToVoid>
+    | `-IntegerLiteral 0x1a7aa560 'int' 0
+    `-CallExpr 0x1a7aa868 'void'
+      |-ImplicitCastExpr 0x1a7aa850 'void (*)(const char *, const char *, unsigned int, const char *) __attribute__((noreturn)) noexcept(true)' <FunctionToPointerDecay>
+      | `-DeclRefExpr 0x1a7aa7c8 'void (const char *, const char *, unsigned int, const char *) __attribute__((noreturn)) noexcept(true)' lvalue Function 0x1a77bd70 '__assert_fail' 'void (const char *, const char *, unsigned int, const char *) __attribute__((noreturn)) noexcept(true)' non_odr_use_unevaluated
+      |-ImplicitCastExpr 0x1a7aa8b0 'const char *' <ArrayToPointerDecay>
+      | `-StringLiteral 0x1a7aa650 'const char[6]' lvalue "false"
+      |-SourceLocExpr 0x1a7aa6d0 'const char *'
+      |-SourceLocExpr 0x1a7aa6f0 'unsigned int'
+      `-ImplicitCastExpr 0x1a7aa8c8 'const char *' <ArrayToPointerDecay>
+        `-UnaryOperator 0x1a7aa7b0 'const char[10]' lvalue prefix '__extension__' cannot overflow
+          `-PredefinedExpr 0x1a7aa798 'const char[10]' lvalue __PRETTY_FUNCTION__
+            `-StringLiteral 0x1a7aa770 'const char[10]' lvalue "top level"

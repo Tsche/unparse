@@ -1,0 +1,83 @@
+.dock-workspace {
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  padding-top: 7px;
+}
+.dock-split {
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  width: 100%;
+  height: 100%;
+}
+.dock-split.row {
+  grid-template-columns: minmax(0, calc(var(--ratio) - 4px)) 8px minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr);
+}
+.dock-split.column {
+  grid-template-rows: minmax(0, calc(var(--ratio) - 4px)) 8px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr);
+}
+.dock-split.row > :first-child {
+  grid-column: 1;
+  grid-row: 1;
+}
+.dock-split.row > .dock-divider {
+  grid-column: 2;
+  grid-row: 1;
+}
+.dock-split.row > :last-child {
+  grid-column: 3;
+  grid-row: 1;
+}
+.dock-split.column > :first-child {
+  grid-row: 1;
+  grid-column: 1;
+}
+.dock-split.column > .dock-divider {
+  grid-row: 2;
+  grid-column: 1;
+}
+.dock-split.column > :last-child {
+  grid-row: 3;
+  grid-column: 1;
+}
+.dock-divider {
+  position: relative;
+  touch-action: none;
+  z-index: 2;
+}
+.dock-split.row > .dock-divider {
+  cursor: col-resize;
+}
+.dock-split.column > .dock-divider {
+  cursor: row-resize;
+}
+.dock-divider::after {
+  content: "";
+  position: absolute;
+  background: var(--border);
+  border-radius: 2px;
+}
+.dock-split.row > .dock-divider::after {
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  left: 3px;
+}
+.dock-split.column > .dock-divider::after {
+  height: 2px;
+  left: 0;
+  right: 0;
+  top: 3px;
+}
+.dock-divider:hover::after,
+.dock-divider:focus-visible::after,
+.resizing .dock-divider::after {
+  background: var(--accent);
+}
+.resizing,
+.resizing * {
+  user-select: none !important;
+}

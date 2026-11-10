@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore Clang AST dumps and reconstruct approximate C++ in a flexible workspace."
+    />
+    <title>AST → C++</title>
+    <link rel="stylesheet" href="/src/ui/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div class="brand">
+          <a
+            class="brand-mark"
+            href=""
+            aria-label="Reload site"
+            title="Reload site"
+            >{ }</a
+          ><strong>AST <span>→</span> C++</strong>
+        </div>
+        <div class="top-actions">
+          <button
+            id="add-input"
+            class="top-button"
+            type="button"
+            title="Create another AST input pane"
+          >
+            Add input
+          </button>
+          <button
+            id="reset-ui"
+            class="top-button"
+            type="button"
+            title="Reset panes and content"
+          >
+            Reset UI
+          </button>
+          <div class="share-menu">
+            <button
+              id="share-button"
+              class="top-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="share-panel"
+            >
+              Share
+            </button>
+            <div id="share-panel" class="share-panel" hidden>
+              <label for="share-url">Link to this workspace</label>
+              <div class="share-link-row">
+                <input
+                  id="share-url"
+                  type="text"
+                  readonly
+                  aria-label="Share link"
+                />
+                <button id="copy-share-url" type="button">Copy</button>
+              </div>
+              <p id="share-status" role="status"></p>
+            </div>
+          </div>
+          <button
+            id="theme-toggle"
+            class="theme-button"
+            type="button"
+            aria-label="Switch theme"
+            title="Switch theme"
+          ></button>
+          <details class="about-menu">
+            <summary aria-label="About this project" title="About this project">
+              i
+            </summary>
+            <div class="about-panel">
+              <h2>About AST → C++</h2>
+              <p>
+                Explore Clang text or JSON AST dumps and reconstruct approximate
+                C++ expressions. Some original source details cannot be
+                recovered from a dump.
+              </p>
+              <p>
+                Formatting runs locally in your browser using
+                <a
+                  href="https://github.com/wasm-fmt/clang-format"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >@wasm-fmt/clang-format</a
+                >, a WebAssembly build of Clang's formatter.
+              </p>
+              <p>
+                Share links compress the workspace locally with fflate and
+                include the input text in the URL.
+              </p>
+              <p class="license-links">
+                Notices:
+                <a href="./licenses/wasm-fmt-clang-format.txt" target="_blank"
+                  >wasm-fmt (MIT)</a
+                >
+                ·
+                <a href="./licenses/fflate.txt" target="_blank">fflate (MIT)</a>
+                ·
+                <a href="./licenses/LLVM.txt" target="_blank"
+                  >LLVM/Clang (Apache 2.0 with LLVM exceptions)</a
+                >
+              </p>
+            </div>
+          </details>
+        </div>
+      </header>
+      <nav id="mobile-tabs" class="mobile-tabs" aria-label="Open panes"></nav>
+      <main
+        id="workspace"
+        class="dock-workspace"
+        aria-label="AST reconstruction workspace"
+      ></main>
+    </div>
+    <script type="module" src="/src/ui/main.js"></script>
+  </body>
+</html>
